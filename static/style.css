@@ -1,0 +1,106 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+}
+
+/* Background */
+.main-bg{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(135deg,#4b2c82,#8e2f5b);
+}
+
+/* Card */
+.card{
+    background:white;
+    width:420px;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Title */
+.main-title{
+    color:#2d2d6e;
+    font-weight:bold;
+}
+
+.subtitle{
+    color:gray;
+    margin-bottom:20px;
+}
+
+/* Input */
+input{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    margin-bottom:15px;
+}
+
+/* Button */
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background: linear-gradient(90deg,#2d2d6e,#b63a6d);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* RESULT PANEL BASE */
+.result-box{
+    margin-top:25px;
+    padding:20px;
+    border-radius:12px;
+    text-align:left;
+    font-weight:bold;
+    border-left:6px solid;
+}
+
+/* SAFE */
+.safe{
+    background:#e9f7ef;
+    color:#1e8449;
+    border-color:#27ae60;
+}
+
+/* LOW RISK */
+.lowrisk{
+    background:#eaf2ff;
+    color:#1f618d;
+    border-color:#3498db;
+}
+
+/* SUSPICIOUS */
+.suspicious{
+    background:#fff3e0;
+    color:#af601a;
+    border-color:#f39c12;
+}
+
+/* DANGEROUS */
+.danger{
+    background:#fdecea;
+    color:#922b21;
+    border-color:#e74c3c;
+}
+
+/* NOT FOUND */
+.notfound{
+    background:#f4f6f7;
+    color:#555;
+    border-color:#7f8c8d;
+}
+
+.footer{
+    margin-top:20px;
+    font-size:13px;
+    color:#aaa;
+}
