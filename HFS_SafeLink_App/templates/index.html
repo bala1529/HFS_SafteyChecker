@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HFS SafeLink Checker</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="main-bg">
+    <div class="card">
+
+        <h1 class="main-title">Hunt for Solution</h1>
+        <p class="subtitle">Smart Website Safety Checker</p>
+
+        <form method="post">
+            <input type="text" name="url" placeholder="Enter website URL (https://example.com)" required>
+            <button type="submit">Check Safety</button>
+        </form>
+
+        {% if result %}
+        <div class="result-box
+            {% if result[0]=='Safe' %} safe
+            {% elif result[0]=='Low Risk' %} lowrisk
+            {% elif result[0]=='Suspicious' %} suspicious
+            {% elif result[0]=='Dangerous' %} danger
+            {% else %} notfound
+            {% endif %}
+        ">
+            <h3>Final Result: {{ result[0] }}</h3>
+            <p><strong>Score:</strong> {{ result[1] }}</p>
+            <p><strong>Domain Name:</strong> {{ result[4] }}</p>
+            <p><strong>Domain Owner:</strong> {{ result[2] }}</p>
+            <p><strong>Domain Age:</strong> {{ result[3] }}</p>
+            <p><strong>VirusTotal:</strong> {{ result[5] }}</p>
+        </div>
+        {% endif %}
+
+        <p class="footer">© 2026 | Hunt for Solution</p>
+
+    </div>
+</div>
+
+</body>
+</html>
